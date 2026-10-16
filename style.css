@@ -1,0 +1,90 @@
+/* =====================================================================
+   1. EDIT HERE FIRST: colors, fonts, spacing, widths.
+   Change a value, save, and the whole site updates.
+   ===================================================================== */
+:root{
+  --bg:#FBFBFA;            /* page background */
+  --surface:#F1F3F3;       /* cards and boxes */
+  --ink:#1B1F21;           /* main text */
+  --muted:#59636A;         /* secondary text */
+  --line:#D9DDE0;          /* borders */
+  --accent:#0B6E54;        /* the ONE accent color (links, status, rules) */
+  --placeholder-bg:#FFF4CC;   /* yellow highlight on [PLACEHOLDERS] */
+  --placeholder-line:#B58900;
+  --font-body:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --font-head:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+  --space-1:.5rem; --space-2:1rem; --space-3:1.5rem; --space-4:2.5rem; --space-5:4.5rem;
+  --width-page:68rem;      /* overall page width */
+  --width-text:42rem;      /* comfortable reading width */
+}
+
+/* 2. BASE */
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:1.0625rem;line-height:1.65}
+h1,h2,h3{font-family:var(--font-head);line-height:1.2;font-weight:600;margin:0 0 var(--space-1)}
+h1{font-size:clamp(2rem,5vw,3.1rem)}
+h2{font-size:clamp(1.4rem,3vw,1.8rem);margin-top:var(--space-4)}
+h3{font-size:1.15rem}
+p{margin:0 0 var(--space-2);max-width:var(--width-text)}
+a{color:var(--accent);text-underline-offset:.2em}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.skip{position:absolute;left:-999px;top:0;background:var(--ink);color:#fff;padding:.6rem 1rem;z-index:10}
+.skip:focus{left:1rem;top:1rem}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+
+/* 3. LAYOUT: header, footer, page width */
+.wrap{max-width:var(--width-page);margin:0 auto;padding:0 var(--space-3)}
+header.site{border-bottom:1px solid var(--line)}
+.bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:var(--space-1) var(--space-3);padding-top:var(--space-2);padding-bottom:var(--space-2)}
+.brand{font-family:var(--font-head);font-size:1.15rem;font-weight:600;color:var(--ink);text-decoration:none}
+nav ul{list-style:none;display:flex;flex-wrap:wrap;gap:var(--space-1) var(--space-3);margin:0;padding:0}
+nav a{color:var(--ink);text-decoration:none;padding:.25rem 0;border-bottom:2px solid transparent}
+nav a:hover,nav a[aria-current]{border-bottom-color:var(--accent)}
+footer.site{border-top:1px solid var(--line);margin-top:var(--space-5);padding:var(--space-3) 0;color:var(--muted)}
+footer.site p{margin:0 0 .25rem}
+.small{font-size:.9rem}
+
+/* 4. HOMEPAGE: hero and project cards */
+.hero{padding-top:var(--space-5);padding-bottom:var(--space-3)}
+.kicker{color:var(--accent);font-weight:600;margin-bottom:var(--space-1)}
+.hero h1{max-width:20ch}
+.lede{font-size:1.2rem}
+.actions{display:flex;flex-wrap:wrap;gap:var(--space-2) var(--space-3);margin-top:var(--space-3)}
+.cards{list-style:none;margin:var(--space-3) 0 0;padding:0;display:grid;gap:var(--space-3);grid-template-columns:repeat(auto-fit,minmax(min(100%,19rem),1fr))}
+.card{position:relative;background:var(--surface);border:1px solid var(--line);border-top:4px solid var(--accent);padding:var(--space-3)}
+.card h3 a{color:var(--ink);text-decoration:none}
+.card h3 a::after{content:"";position:absolute;inset:0}
+.card:hover{border-color:var(--ink)}
+.card:focus-within{outline:3px solid var(--accent);outline-offset:3px}
+.card .ctx{color:var(--muted);font-size:.95rem}
+.more{color:var(--accent);font-weight:600;margin:0}
+
+/* 5. COMPONENTS: status label, placeholder, key facts, notes */
+.status{display:inline-block;font-size:.85rem;font-weight:600;color:var(--accent);border:1px solid var(--accent);padding:.1rem .55rem;margin-bottom:var(--space-1)}
+.ph{background:var(--placeholder-bg);border:1px dashed var(--placeholder-line);padding:.05em .35em}
+p.ph,div.ph{display:block;padding:.6rem .8rem}
+.meta,.brief{margin:0 0 var(--space-2)}
+.meta div,.brief div{margin-bottom:.4rem}
+dt{font-size:.85rem;font-weight:600;color:var(--muted)}
+dd{margin:0}
+.hint{color:var(--muted);font-size:.95rem}
+.callout{border-left:4px solid var(--placeholder-line);background:var(--surface);padding:var(--space-2);margin:var(--space-3) 0;max-width:var(--width-text)}
+.callout p{margin:0}
+
+/* 6. CASE STUDY PAGES */
+.cs{padding-top:var(--space-4);max-width:calc(var(--width-text) + 2 * var(--space-3))}
+.brief-box{background:var(--surface);border:1px solid var(--line);padding:var(--space-3);margin-top:var(--space-3)}
+.brief-box h2{margin-top:0}
+.toc ol{columns:2;padding-left:1.2rem;margin:0}
+.toc h2{font-size:1.1rem}
+.finding{border-top:1px solid var(--line);padding-top:var(--space-2);margin-top:var(--space-2)}
+.label{font-size:.85rem;font-weight:600;color:var(--accent);margin:0 0 .25rem}
+figure{margin:var(--space-3) 0}
+figure img{max-width:100%;height:auto}
+.fig{min-height:12rem;display:flex!important;align-items:center;justify-content:center;text-align:center}
+figcaption{font-size:.95rem;color:var(--muted);margin-top:.4rem}
+details{margin:var(--space-2) 0}
+summary{cursor:pointer;font-weight:600}
+@media (max-width:40rem){.toc ol{columns:1}}
