@@ -21,6 +21,7 @@
 /* 2. BASE */
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
+[hidden]{display:none!important}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:1.0625rem;line-height:1.65}
 h1,h2,h3{font-family:var(--font-head);line-height:1.2;font-weight:600;margin:0 0 var(--space-1)}
 h1{font-size:clamp(2rem,5vw,3.1rem)}
@@ -46,20 +47,24 @@ footer.site{border-top:1px solid var(--line);margin-top:var(--space-5);padding:v
 footer.site p{margin:0 0 .25rem}
 .small{font-size:.9rem}
 
-/* 4. HOMEPAGE: hero and project cards */
+/* 4. HOMEPAGE: hero and featured-work rows */
 .hero{padding-top:var(--space-5);padding-bottom:var(--space-3)}
-.kicker{color:var(--accent);font-weight:600;margin-bottom:var(--space-1)}
-.hero h1{max-width:20ch}
+.hero h1{font-size:clamp(2.4rem,6vw,3.6rem);margin-bottom:.2rem}
+.kicker{color:var(--accent);font-weight:600;font-size:1.15rem;margin-bottom:var(--space-2)}
 .lede{font-size:1.2rem}
-.actions{display:flex;flex-wrap:wrap;gap:var(--space-2) var(--space-3);margin-top:var(--space-3)}
-.cards{list-style:none;margin:var(--space-3) 0 0;padding:0;display:grid;gap:var(--space-3);grid-template-columns:repeat(auto-fit,minmax(min(100%,19rem),1fr))}
-.card{position:relative;background:var(--surface);border:1px solid var(--line);border-top:4px solid var(--accent);padding:var(--space-3)}
-.card h3 a{color:var(--ink);text-decoration:none}
-.card h3 a::after{content:"";position:absolute;inset:0}
-.card:hover{border-color:var(--ink)}
-.card:focus-within{outline:3px solid var(--accent);outline-offset:3px}
-.card .ctx{color:var(--muted);font-size:.95rem}
-.more{color:var(--accent);font-weight:600;margin:0}
+.actions{display:flex;flex-wrap:wrap;gap:var(--space-1) var(--space-3);margin-top:var(--space-2);font-weight:600}
+.rows{list-style:none;margin:var(--space-3) 0 0;padding:0}
+.row{display:grid;grid-template-columns:12rem 1fr;gap:var(--space-3);padding:var(--space-4) 0;border-top:1px solid var(--line)}
+.row:last-child{border-bottom:1px solid var(--line)}
+.row h3{font-size:clamp(1.3rem,2.6vw,1.75rem)}
+.row h3 a{color:var(--ink)}
+.kind{font-size:.9rem;font-weight:600;color:var(--accent);margin:0 0 .25rem}
+.more{font-weight:600;margin:0}
+.chips{list-style:none;margin:0;padding:0;display:grid;gap:.4rem;justify-items:start}
+.chip{display:inline-block;font-size:.82rem;font-weight:600;padding:.12rem .5rem;border:1px solid var(--line);margin-right:.3rem}
+.chip.done{color:var(--accent);border-color:var(--accent)}
+.chip.prop{color:var(--ink);border:1px dashed var(--ink)}
+@media (max-width:44rem){.row{grid-template-columns:1fr;gap:var(--space-1)}}
 
 /* 5. COMPONENTS: status label, placeholder, key facts, notes */
 .status{display:inline-block;font-size:.85rem;font-weight:600;color:var(--accent);border:1px solid var(--accent);padding:.1rem .55rem;margin-bottom:var(--space-1)}
@@ -88,3 +93,19 @@ figcaption{font-size:.95rem;color:var(--muted);margin-top:.4rem}
 details{margin:var(--space-2) 0}
 summary{cursor:pointer;font-weight:600}
 @media (max-width:40rem){.toc ol{columns:1}}
+
+/* 7. COMPARISON DIAGRAM and TABLE (Beyond Behavioral Metrics page) */
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-3);margin:var(--space-3) 0}
+.way{border:1px solid var(--line);background:var(--surface);padding:var(--space-3)}
+.way.proposed{border:2px dashed var(--ink);background:var(--bg)}
+.way h3{margin-bottom:.1rem}
+.way .tagline{color:var(--muted);font-size:.95rem;margin:0}
+.steps{list-style:none;counter-reset:s;padding:0;margin:var(--space-2) 0 0}
+.steps li{counter-increment:s;position:relative;padding:.5rem 0 .5rem 2rem;border-top:1px solid var(--line)}
+.steps li::before{content:counter(s);position:absolute;left:0;font-weight:700;color:var(--accent)}
+.steps li.gap{color:var(--muted);font-style:italic}
+table{border-collapse:collapse;width:100%;max-width:var(--width-text);margin:var(--space-2) 0}
+caption{text-align:left;font-size:.95rem;color:var(--muted);padding-bottom:.4rem}
+th,td{border:1px solid var(--line);padding:.5rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--surface)}
+@media (max-width:44rem){.compare{grid-template-columns:1fr}}

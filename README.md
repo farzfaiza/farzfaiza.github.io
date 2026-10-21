@@ -3,8 +3,9 @@
 Plain HTML and CSS. No installs, no build tools, no paid services.
 
 ## What is in this folder
-- `index.html`: homepage with the project cards and contact links
+- `index.html`: homepage with the featured work list and contact links
 - `about.html`: background, interests, experience, resume link
+- `projects/beyond-behavioral-metrics.html`: your research methodology case study, built from your notes (edit freely)
 - `projects/gtri-research.html`, `projects/neuroscience-research.html`, `projects/nonprofit-audit.html`: case study templates
 - `style.css`: the only stylesheet. Colors, fonts and widths are at the very top.
 - `assets/`: your screenshots, charts and `resume.pdf` go here
@@ -12,7 +13,7 @@ Plain HTML and CSS. No installs, no build tools, no paid services.
 ## Publish on GitHub Pages
 1. Unzip this folder on your computer.
 2. On github.com click **+**, then **New repository**. Name it exactly `USERNAME.github.io` (replace USERNAME with your GitHub username). Keep it **Public** and create it.
-3. In the new repository click **Add file**, then **Upload files**. Open the unzipped folder and drag everything INSIDE it into the window (`index.html`, `about.html`, `style.css`, `projects`, `assets`, `README.md`). Wait for the uploads to finish, then click **Commit changes**.
+3. In the new repository click **Add file**, then **Upload files**. Do not upload the .zip itself, because GitHub cannot unpack it. Open the unzipped folder, press **Ctrl+A** (Windows) or **Cmd+A** (Mac) to select everything inside it, and drag it all into the window at once, folders included. Use Chrome, Edge or Firefox, since Safari can skip folders. Wait for the uploads to finish, then click **Commit changes**. `README.md` is only for you, so you can leave it out.
 4. Go to **Settings**, then **Pages**. Under Build and deployment choose **Deploy from a branch**, pick branch **main** and folder **/ (root)**, then **Save**.
 5. Wait 1 to 3 minutes and open `https://USERNAME.github.io`.
 
@@ -30,23 +31,23 @@ All links are relative, so the site also works if the repository has a different
 - **Add an image:** upload it to `assets/` (open that folder, **Add file**, **Upload files**). In the case study, delete the grey placeholder `div` and use the `<img>` line shown in the comment beside it. Always write real alt text.
 - **Resume:** upload your PDF to `assets/` and name it `resume.pdf`.
 - **Email and LinkedIn:** edit the Contact section in `index.html`.
-- **Reorder or hide a card:** each card in `index.html` sits between `CARD START` and `CARD END` comments. Cut and paste a card to reorder. To hide one, put `<!--` before `CARD START` and `-->` after `CARD END`.
+- **Reorder or hide a project:** each project in `index.html` sits between `ROW START` and `ROW END` comments. Cut and paste a block to reorder. To hide one, add the word `hidden` inside its tag: `<li class="row">` becomes `<li class="row" hidden>`. Remove the word to show it again.
 
 ## Add a fourth case study
 1. On GitHub open `projects/nonprofit-audit.html` and click the **Copy raw file** icon.
 2. Open the `projects` folder, click **Add file**, then **Create new file**. Name it `projects/your-project-name.html` (lowercase, hyphens, no spaces). Paste, and commit.
 3. Open your new file and edit: `<title>`, the `description` line, the `<h1>`, the summary under it, the "Before you publish" box, the "At a glance" box, and every section.
-4. Open `index.html`, copy one whole card (from `CARD START` to `CARD END`), paste it after the last card, and change the link (`projects/your-project-name.html`), title, context, summary, domain and methods.
+4. Open `index.html`, copy one whole project (from `ROW START` to `ROW END`), paste it after the last one, and change the link (`projects/your-project-name.html`), status labels, title, summary, what you investigated, your role and methods.
 5. Optional: add a line for it in the Experience list in `about.html`.
-6. Commit, wait a minute, and click the new card to check that it opens and that Back to all work returns you home.
+6. Commit, wait a minute, and click the new project to check that it opens and that Back to all work returns you home.
 
 ## Content rules this template follows
 Placeholders are yellow and clearly labeled. Findings (what the evidence showed) are kept apart from interpretation, recommendations and verified outcomes. Do not add results, numbers, quotes or outcomes you cannot back up. Check what GTRI, your lab and the nonprofit allow you to share.
 
 ## Before you announce the site: checklists
 **Links**
-- [ ] Click every menu link on every page (Work, About, Resume, Contact)
-- [ ] Open all three case studies from the homepage, and from About
+- [ ] Click every menu link on every page (Work, About, Contact) and the Resume link on the homepage
+- [ ] Open all four case studies from the homepage, and from About
 - [ ] "Back to all work" works on each case study
 - [ ] The resume link opens your PDF, and the email link opens your mail app
 
