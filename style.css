@@ -108,4 +108,11 @@ table{border-collapse:collapse;width:100%;max-width:var(--width-text);margin:var
 caption{text-align:left;font-size:.95rem;color:var(--muted);padding-bottom:.4rem}
 th,td{border:1px solid var(--line);padding:.5rem .7rem;text-align:left;vertical-align:top}
 th{background:var(--surface)}
+.chip.wip{color:var(--muted);border-style:dashed}
+.table-wrap{overflow-x:auto}
+.table-wrap table{max-width:none;min-width:34rem}
+.flow{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(8.5rem,1fr));margin:var(--space-2) 0;padding:0;border:1px solid var(--line)}
+.flow li{padding:.7rem .8rem;border-right:1px solid var(--line);border-bottom:1px solid var(--line);margin:-0px -1px -1px 0}
+.flow a{display:block;font-weight:600;color:var(--ink)}
+.flow span{font-size:.85rem;color:var(--muted)}
 @media (max-width:44rem){.compare{grid-template-columns:1fr}}
