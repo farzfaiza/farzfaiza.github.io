@@ -88,6 +88,7 @@ dd{margin:0}
 .label{font-size:.85rem;font-weight:600;color:var(--accent);margin:0 0 .25rem}
 figure{margin:var(--space-3) 0}
 figure img{max-width:100%;max-height:36rem;width:auto;height:auto}
+figure video{display:block;max-width:100%;height:auto;background:var(--surface)}
 .fig{min-height:12rem;display:flex!important;align-items:center;justify-content:center;text-align:center}
 figcaption{font-size:.95rem;color:var(--muted);margin-top:.4rem}
 details{margin:var(--space-2) 0}
