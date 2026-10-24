@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Class Q: A Tablet App Prototype for Tracking Student Hall Passes | Farzana Faiza</title>
+<meta name="description" content="A team prototype of a tablet app that helps teachers run a hall pass queue and see where students go and how long they are out of class, developed at GTRI and presented in July 2022.">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="site"><div class="wrap bar">
+<a class="brand" href="../index.html">Farzana Faiza</a>
+<nav aria-label="Main"><ul>
+<li><a href="../index.html#work">Work</a></li>
+<li><a href="../about.html">About</a></li>
+<li><a href="../index.html#contact">Contact</a></li>
+</ul></nav></div></header>
+
+<main id="main" class="wrap cs">
+<p><a href="../index.html#work">Back to all work</a></p>
+<p><span class="chip done">Completed: prototype presented</span> <span class="chip wip">Documentation in progress</span></p>
+<p class="kind">Team design project | Georgia Tech Research Institute</p>
+<h1>Class Q: A Tablet App Prototype for Tracking Student Hall Passes</h1>
+<p class="lede">A team prototype of a tablet app that helps teachers run a hall pass queue and see where students go and how long they are out of class, developed at GTRI and presented in July 2022.</p>
+<div class="callout"><p><strong>Before you publish:</strong> Confirm with your GTRI mentor that you may share these slides and images. The deck pages carry an "Unclassified" marking. Check that your teammates are comfortable being named and that no reviewer names appear in any photo. Delete this box when done.</p></div>
+<section class="brief-box" aria-labelledby="glance-h">
+<h2 id="glance-h">At a glance</h2>
+<dl class="brief">
+<div><dt>What I investigated</dt><dd>How a teacher could manage a hall pass queue and see where students go and how long they are out, without paper passes.</dd></div>
+<div><dt>Context</dt><dd>GTRI project titled "Interactive Mobile App Prototyping" <span class="ph">[ADD PROGRAM NAME, e.g. the internship program, and your status at the time]</span></dd></div>
+<div><dt>Timeline</dt><dd>Final presentation July 22, 2022 <span class="ph">[ADD START DATE]</span></dd></div>
+<div><dt>Team</dt><dd>Three people <span class="ph">[ADD TEAMMATE NAMES IF THEY AGREE]</span></dd></div>
+<div><dt>My role</dt><dd><span class="ph">[ADD YOUR SPECIFIC ROLE]</span></dd></div>
+<div><dt>Methods and skills</dt><dd>Persona development, competitor review, sketching, wireframing, design iteration from expert feedback, visual design, tablet prototyping</dd></div>
+<div><dt>Data collected</dt><dd>Written feedback from user-testing reviewers (nine sticky notes). No usage data.</dd></div>
+<div><dt>Verified outcome</dt><dd>None beyond the final presentation</dd></div>
+</dl>
+</section>
+<nav class="toc" aria-labelledby="toc-h"><h2 id="toc-h">Contents</h2><ol><li><a href="#need-h">The need</a></li><li><a href="#persona-h">Persona</a></li><li><a href="#competitors-h">Competitor review</a></li><li><a href="#design-h">Sketches and wireframes</a></li><li><a href="#feedback-h">Feedback on the prototype</a></li><li><a href="#iteration-h">Iteration after feedback</a></li><li><a href="#identity-h">Name, logo and visual design</a></li><li><a href="#prototype-h">The prototype</a></li><li><a href="#future-h">Future work</a></li><li><a href="#contrib-h">My specific contributions</a></li><li><a href="#limits-h">Limitations</a></li><li><a href="#outcomes-h">Outcomes</a></li><li><a href="#reflection-h">Reflection and next steps</a></li></ol></nav>
+<p class="hint">Sections marked <span class="chip done">Shown in my project deck</span> come from my project slides. Yellow items still need my input.</p>
+<section aria-labelledby="need-h">
+<h2 id="need-h">The need</h2>
+<p><span class="chip done">Shown in my project deck</span></p>
+<p>The brief said teachers should be able to monitor how often students ask to leave class, how long students are out, and where they go. The app should also create a line (queue) for students who asked to leave, and gather information about student activity so a teacher can tell whether someone is out of class for a troubling amount of time.</p>
+<p class="ph">[ADD WHERE THIS BRIEF CAME FROM: an assigned prompt, teacher input, or both]</p>
+</section>
+<section aria-labelledby="persona-h">
+<h2 id="persona-h">Persona</h2>
+<p><span class="chip done">Shown in my project deck</span></p>
+<p>Betty Lee is a persona: a composite character the team wrote to represent a teacher. She is not a research participant. She is a high school math teacher in Atlanta, Georgia, in her mid to late 30s.</p>
+<div class="compare">
+<div class="way"><h3>Her problems</h3><ul>
+<li>Typically looks for students after 15 minutes</li>
+<li>Class is constantly interrupted by questions about leaving the room</li>
+<li>Has to remember who asked first</li></ul></div>
+<div class="way"><h3>Her needs</h3><ul>
+<li>An organized queue</li>
+<li>A way to keep track of which student has left and where they went</li>
+<li>A way to see student history and who has been out the longest</li>
+<li>A way to eliminate physical or paper hall pass sheets</li></ul></div>
+</div>
+<p class="hint">The 15 minutes is a detail of the persona, not a measured result.</p>
+<p class="ph">[ADD WHAT THE PERSONA WAS BASED ON: interviews, your own experience, or assumptions. If you interviewed teachers, add how many, who and when. The deck does not show interviews.]</p>
+</section>
+<section aria-labelledby="competitors-h">
+<h2 id="competitors-h">Competitor review</h2>
+<p><span class="chip done">Shown in my project deck</span></p>
+<p>The team looked at three existing apps: Hall Pass School Visitor Management, SmartPass and PassWhiz. The team's summary was that they have student profiles, track students' locations, and use a UI that is difficult to navigate.</p>
+<p class="ph">[ADD HOW YOU EVALUATED THEM: hands-on trial, demos, screenshots or reviews. "Difficult to navigate" is the team's judgment, so say what it rests on.]</p>
+</section>
+<section aria-labelledby="design-h">
+<h2 id="design-h">Sketches and wireframes</h2>
+<p><span class="chip done">Shown in my project deck</span></p>
+<p>The team sketched on whiteboards before wireframing. The sketches work through the dashboard, a student directory, and how teachers and administrators would enter the app. The wireframes then covered the dashboards, a class view with a grid of students, check-out and check-in, edit profile, FAQs, settings and the student directory.</p>
+<figure>
+<img src="../assets/gtri/sketch-admin-flow.jpg" alt="Whiteboard sketch of the admin and educator paths, showing a choice between admin and educator, a dashboard, and a student directory." width="1400" height="973" loading="lazy">
+<figcaption>Figure 1. Whiteboard sketch of the admin and educator paths.</figcaption>
+</figure>
+<figure>
+<img src="../assets/gtri/sketch-tablet-flows.jpg" alt="Whiteboard sketches of tablet screens with login, dashboard and sidebar layouts, with handwritten notes on problems to solve." width="1120" height="1400" loading="lazy">
+<figcaption>Figure 2. Tablet screen sketches with the team's notes on problems to solve.</figcaption>
+</figure>
+<figure>
+<img src="../assets/gtri/wireframe-dashboards.jpg" alt="Grayscale wireframes of teacher dashboards, a class view with a grid of students, and a check-out and check-in screen." width="673" height="522" loading="lazy">
+<figcaption>Figure 3. Wireframes of the dashboards, class view and check-in and check-out screen.</figcaption>
+</figure>
+<figure>
+<img src="../assets/gtri/wireframe-screens.jpg" alt="Grayscale wireframes of the edit profile, FAQs, settings, student directory and individual student screens." width="673" height="365" loading="lazy">
+<figcaption>Figure 4. Wireframes of the profile, help, settings and student screens.</figcaption>
+</figure>
+</section>
+<section aria-labelledby="feedback-h">
+<h2 id="feedback-h">Feedback on the prototype</h2>
+<p><span class="chip done">Shown in my project deck</span></p>
+<p>After the wireframes, UX researchers from the ICL user testing group reviewed the prototype and wrote their comments on sticky notes. The deck calls this step User Testing and acknowledges four reviewers. These were UX researchers giving mentorship-style feedback, not teachers, who are the app's intended users.</p>
+<p class="ph">[CONFIRM HOW THE FEEDBACK WAS GIVEN: reviewing screens, or watching someone complete tasks. Add how many reviewers took part.]</p>
+<h3>What the nine notes said</h3>
+<ul>
+<li><strong>Labels and orientation.</strong> Add a header and short description to each page. Name the login button "instructor login." Add a title to the teacher dashboard. The difference between two teacher dashboards was unclear, and so was the meaning of two square dots beside a class.</li>
+<li><strong>Navigation.</strong> The hamburger menu items and the navigation bar were unclear. One reviewer suggested opening navigation at the bottom instead.</li>
+<li><strong>The line.</strong> It was unclear where the line starts and ends. Reviewers asked whether each period needs its own line and whether a limit is needed on how many students can go to one place. One suggested putting a border around the picture of the student who is out, and ordering the rest by who is next.</li>
+<li><strong>Accounts and access.</strong> Reviewers asked how a substitute teacher would use the app, what the sign-in options are, and whether students would have accounts. One suggested single sign-on through the school, because student information is sensitive. Teachers also needed a way to choose how many classes appear on the dashboard.</li>
+<li><strong>Data.</strong> One reviewer asked how the data would be sorted and arranged.</li>
+</ul>
+<h3>Interpretation (my reading, not the data)</h3>
+<p>Most comments were about whether a person could tell where they were and what each control did, which points to labeling and navigation more than missing features. A smaller group were questions about who the users are and how they sign in.</p>
+<figure>
+<div class="ph fig" role="img" aria-label="Placeholder for a photo of the sticky notes">[OPTIONAL: INSERT A PHOTO OF THE STICKY NOTES. The notes carry reviewers' names, so crop or blur them, or get permission first.]</div>
+<figcaption>Figure 5. Written feedback from the user-testing reviewers.</figcaption>
+</figure>
+</section>
+<section aria-labelledby="iteration-h">
+<h2 id="iteration-h">Iteration after feedback</h2>
+<p><span class="chip done">Shown in my project deck</span></p>
+<p>The deck shows a revised dashboard sketch with a bottom navigation bar of icons, and a revised map of the app: login, dashboard, student history and directory, classes by period leading to the check-in and check-out system, settings, FAQs and profile.</p>
+<figure>
+<img src="../assets/gtri/iteration-navigation.jpg" alt="Revised dashboard sketch titled Mr. Smith's Dashboard with a bottom navigation bar of five icons." width="1400" height="822" loading="lazy">
+<figcaption>Figure 6. Revised dashboard sketch with bottom navigation.</figcaption>
+</figure>
+<figure>
+<img src="../assets/gtri/iteration-sitemap.jpg" alt="Hand-drawn site map from login to dashboard, classes, settings, FAQs and profile pages, with class periods leading to a check-in and check-out system." width="1400" height="554" loading="lazy">
+<figcaption>Figure 7. Revised map of the app.</figcaption>
+</figure>
+<p>The deck does not show a second round of feedback, so I cannot say whether these changes fixed the problems reviewers raised.</p>
+<p class="ph">[ADD WHETHER YOU RETESTED, AND WHAT WAS DECIDED ABOUT EACH COMMENT]</p>
+</section>
+<section aria-labelledby="identity-h">
+<h2 id="identity-h">Name, logo and visual design</h2>
+<p><span class="chip done">Shown in my project deck</span></p>
+<p>The team brainstormed names (Hall Passport, GoPass, Outpass, Passage) and settled on Class Q, with a logo of a location pin containing the letter Q.</p>
+<figure>
+<img src="../assets/gtri/logo-final.jpg" alt="Final Class Q logo: a yellow location pin containing the letter Q, with the word class above it." width="983" height="1400" loading="lazy">
+<figcaption>Figure 8. The Class Q logo.</figcaption>
+</figure>
+<p>The visual system uses four main colors and one typeface:</p>
+<ul>
+<li>Eerie Black #191716, for text</li>
+<li>Golden Rod #E6AF2E, an accent</li>
+<li>Cultured #F6F6F4, the background</li>
+<li>Deep Chestnut #B94848, an accent</li>
+<li>Sofia Pro in Light, Regular and Bold</li>
+</ul>
+<figure>
+<img src="../assets/gtri/palette.jpg" alt="Color palette: Eerie Black, Golden Rod, Cultured and Deep Chestnut, with a gold-to-chestnut gradient and two gray neutrals." width="853" height="558" loading="lazy">
+<figcaption>Figure 9. The Class Q color palette.</figcaption>
+</figure>
+<p class="ph">[ADD WHICH PARTS OF THE LOGO AND VISUAL DESIGN YOU PERSONALLY DID]</p>
+</section>
+<section aria-labelledby="prototype-h">
+<h2 id="prototype-h">The prototype</h2>
+<p><span class="chip done">Shown in my project deck</span></p>
+<p>The final prototype is a set of tablet screens: a loading screen, a choice of Teacher or Administrator account, a dashboard with Student History and Your Profile, FAQs, settings, edit profile and data settings.</p>
+<figure>
+<img src="../assets/gtri/prototype-onboarding.jpg" alt="Tablet mockups of the Class Q loading screen and an account type screen where users choose Teacher or Administrator." width="923" height="730" loading="lazy">
+<figcaption>Figure 10. Loading and account type screens.</figcaption>
+</figure>
+<figure>
+<img src="../assets/gtri/prototype-screens.jpg" alt="Tablet mockups of FAQs, settings, edit profile and data settings screens." width="945" height="741" loading="lazy">
+<figcaption>Figure 11. Help, settings, profile and data screens.</figcaption>
+</figure>
+<figure>
+<img src="../assets/gtri/prototype-dashboard.jpg" alt="Tablet mockup of the teacher dashboard with Student History and Your Profile buttons and a bottom icon bar." width="1121" height="836" loading="lazy">
+<figcaption>Figure 12. The teacher dashboard.</figcaption>
+</figure>
+<p class="ph">[ADD THE TOOL YOU USED AND WHETHER THE PROTOTYPE WAS CLICKABLE]</p>
+</section>
+<section aria-labelledby="future-h">
+<h2 id="future-h">Future work</h2>
+<p><span class="chip done">Shown in my project deck</span></p>
+<p>The deck lists three next steps: a substitute teacher account, wider use of single sign-on (SSO) logins, and use across all schools in a district. The first two match questions raised in the feedback.</p>
+</section>
+<section aria-labelledby="contrib-h">
+<h2 id="contrib-h">My specific contributions</h2>
+<p class="hint">The deck lists three team members. Say which parts you did yourself, such as research, sketching, wireframes, branding, visual design or the prototype. Be precise and modest.</p>
+<p class="ph">[ADD YOUR CONTRIBUTIONS]</p>
+</section>
+<section aria-labelledby="limits-h">
+<h2 id="limits-h">Limitations</h2>
+<ul>
+<li>The feedback came from UX researchers reviewing a prototype. As far as the deck shows, no teachers tested it, so it says little about how teachers would actually use the app.</li>
+<li>The persona is a composite, and the deck does not document what it was based on.</li>
+<li>There was no second round of feedback, so the effect of the design changes is unknown.</li>
+<li>This is a prototype. It was not built or used in a school.</li>
+<li>The palette was not tested for accessibility in the deck. Checking afterward, Golden Rod on Cultured has a contrast ratio of 1.84 to 1, which is too low for text, so gold works only as an accent. Eerie Black on Cultured is 16.5 to 1.</li>
+</ul>
+</section>
+<section aria-labelledby="outcomes-h">
+<h2 id="outcomes-h">Outcomes</h2>
+<p>The deck is dated July 22, 2022 and includes thanks to the GTRI program leaders and mentors. I have no verified outcome beyond the final presentation.</p>
+<p class="ph">[ADD ANY OUTCOME YOU CAN VERIFY, OR LEAVE AS IS]</p>
+</section>
+<section aria-labelledby="reflection-h">
+<h2 id="reflection-h">Reflection and next steps</h2>
+<p class="hint">What you would do differently, and what you would study next. One thing to consider: the team found competitors hard to navigate, and reviewers raised navigation as an issue in your own design too.</p>
+<p class="ph">[ADD YOUR REFLECTION]</p>
+</section>
+<p><a href="../index.html#work">Back to all work</a></p>
+</main>
+<footer class="site"><div class="wrap">
+<p>Farzana Faiza. UX research and human factors.</p>
+<p class="small">Version 1. Some case studies are still being documented.</p>
+</div></footer>
+</body>
+</html>
